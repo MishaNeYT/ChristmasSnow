@@ -1,4 +1,4 @@
-// #NotNull будет не работать в eclipse - рекомендую Intllij IDEA
+// #NotNull не будет работать в eclipse - рекомендую Intllij IDEA
 
 package mc.kairivson.snow;
 
