@@ -1,0 +1,16 @@
+Settings:
+  SnowToSpawn: true
+SnowToSpawn:
+  Count: 25
+  RadiusX: 15.0
+  RadiusY: 30.0
+  RadiusZ: 15.0
+Messages:
+  Help:
+  - ''
+  - '&2 Помощь по плагину &bCSnow &8| &2Текущая версия: &f%version%'
+  - '&8 ▪ &b/csnow &f- помощь по плагину;'
+  - '&8 ▪ &b/csnow reload &f- перезагрузить плагин.'
+  - ''
+  Reload: '&2Snow &8| &fПлагин успешно - &aперезагружен&f!'
+  noPerms: '&cУ вас нет прав!'

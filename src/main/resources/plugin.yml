@@ -1,0 +1,7 @@
+name: ChristmasSnow
+version: '${project.version}'
+main: mc.kairivson.snow.Main
+authors: [ Kai_Rivson ]
+commands:
+  csnow:
+    permission: csnow.admin
