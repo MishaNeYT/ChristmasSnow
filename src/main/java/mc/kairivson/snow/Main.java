@@ -1,3 +1,5 @@
+// #NotNull будет не работать в eclipse - рекомендую Intllij IDEA
+
 package mc.kairivson.snow;
 
 import org.bukkit.Bukkit;
