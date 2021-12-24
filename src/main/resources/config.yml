@@ -1,5 +1,12 @@
 Settings:
+  TitlesOnJoin: true
   SnowToSpawn: true
+TitlesOnJoin:
+  Title: '&c&l2021!'
+  Subtitle: '&eПоздравляю всех с новым годом!'
+  FadeIn: 20
+  Stay: 40
+  FadeOut: 30
 SnowToSpawn:
   Count: 25
   RadiusX: 15.0
@@ -12,5 +19,8 @@ Messages:
   - '&8 ▪ &b/csnow &f- помощь по плагину;'
   - '&8 ▪ &b/csnow reload &f- перезагрузить плагин.'
   - ''
+  SnowOnOffUse: '&2Snow &8| &fИспользуйте: &e/csnow on &fили &e/csnow off&f.'
+  SnowEnable: '&2Snow &8| &fУспешно - &aвключён&f!'
+  SnowDisable: '&2Snow &8| &fУспешно - &cотключён&f!'
   Reload: '&2Snow &8| &fПлагин успешно - &aперезагружен&f!'
   noPerms: '&cУ вас нет прав!'
