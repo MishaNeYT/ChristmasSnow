@@ -59,6 +59,7 @@ public final class Main extends JavaPlugin implements Listener, CommandExecutor 
     /* ******************************************************************************************* */
 
 
+    // #NotNull не будет работать в eclipse - рекомендую Intllij IDEA!
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("csnow")) {
