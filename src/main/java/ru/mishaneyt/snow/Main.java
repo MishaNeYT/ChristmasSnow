@@ -64,10 +64,11 @@ public class Main extends JavaPlugin implements Listener, CommandExecutor {
 
 
     public void Updates() {
-        for (Player player : Bukkit.getOnlinePlayers())
-            if (getConfig().getBoolean("Settings.SnowToSpawn")) {
+        if(getConfig().getBoolean("Settings.SnowToSpawn")) {
+            for (Player player : Bukkit.getOnlinePlayers()) {
                 player.spawnParticle(Particle.FIREWORKS_SPARK, player.getLocation(), this.config.getInt("SnowToSpawn.Count"), this.config.getInt("SnowToSpawn.RadiusX"), this.config.getInt("SnowToSpawn.RadiusY"), this.config.getInt("SnowToSpawn.RadiusZ"), 0.0);
             }
+        }
     }
 
     /* ******************************************************************************************* */
