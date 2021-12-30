@@ -64,10 +64,11 @@ public class Main extends JavaPlugin implements Listener, CommandExecutor {
 
 
     public void Updates() {
-        for (Player player : Bukkit.getOnlinePlayers())
-            if (getConfig().getBoolean("Settings.SnowToSpawn")) {
-                player.spawnParticle(Particle.FIREWORKS_SPARK, player.getLocation(), this.config.getInt("SnowToSpawn.Count"), this.config.getInt("SnowToSpawn.RadiusX"), this.config.getInt("SnowToSpawn.RadiusY"), this.config.getInt("SnowToSpawn.RadiusZ"), 0.0);
+        if (getConfig().getBoolean("Settings.SnowToSpawn")) {
+            for (Player player : Bukkit.getOnlinePlayers()) {
+                player.spawnParticle(Particle.FIREWORKS_SPARK, player.getLocation(), this.config.getInt("SnowToSpawn.Count"), this.config.getInt("SnowToSpawn.RadiusX"), this.config.getInt("SnowToSpawn.RadiusY"), this.config.getInt("SnowToSpawn.RadiusZ"), this.config.getInt("SnowToSpawn.Speed"));
             }
+        }
     }
 
     /* ******************************************************************************************* */
@@ -77,10 +78,12 @@ public class Main extends JavaPlugin implements Listener, CommandExecutor {
         if (cmd.getName().equalsIgnoreCase("csnow")) {
             if (sender.hasPermission("csnow.admin")) {
                 if (args.length == 0) {
-                    PluginDescriptionFile pdf = getDescription();
-                    for (String helpMsg : getConfig().getStringList("Messages.Help")) {
-                        helpMsg = helpMsg.replaceAll("%version%", pdf.getVersion());
-                        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', " " + helpMsg));
+                    if (sender.hasPermission("csnow.admin")) {
+                        PluginDescriptionFile pdf = getDescription();
+                        for (String helpMsg : getConfig().getStringList("Messages.Help")) {
+                            helpMsg = helpMsg.replaceAll("%version%", pdf.getVersion());
+                            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', " " + helpMsg));
+                        }
                     }
                 }
 

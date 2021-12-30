@@ -12,6 +12,7 @@ SnowToSpawn:
   RadiusX: 15.0
   RadiusY: 30.0
   RadiusZ: 15.0
+  Speed: 0.0
 Messages:
   Help:
   - ''
