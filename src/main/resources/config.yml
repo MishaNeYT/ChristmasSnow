@@ -1,18 +1,15 @@
 Settings:
-  TitlesOnJoin: true
   SnowToSpawn: true
-TitlesOnJoin:
-  Title: '&c&l2021!'
-  Subtitle: '&eПоздравляю всех с новым годом!'
-  FadeIn: 20
-  Stay: 40
-  FadeOut: 30
+  EnableWorld:
+  - world
+  - spawn
+
 SnowToSpawn:
-  Count: 25
-  RadiusX: 15.0
-  RadiusY: 30.0
-  RadiusZ: 15.0
-  Speed: 0.0
+  Count: 15
+  RadiusX: 10.0
+  RadiusY: 10.0
+  RadiusZ: 10.0
+
 Messages:
   Help:
   - ''
@@ -20,5 +17,16 @@ Messages:
   - '&8 ▪ &b/csnow &f- помощь по плагину;'
   - '&8 ▪ &b/csnow reload &f- перезагрузить плагин.'
   - ''
+  - '&2 Создатель: MishaNeYT (VK: @pleasantvkchannel)'
+  - ''
+
   Reload: '&2Snow &8| &fПлагин успешно - &aперезагружен&f!'
-  noPerms: '&cУ вас нет прав!'
+  OnlyPlayer: '&2Snow &8| &cКоманду может использовать только игрок!'
+  ErrorArgs: '&2Snow &8| &cКоманда введена не правильно! Используйте /csnow'
+  noPerm: '&2Snow &8| &cУ вас нет прав!'
+
+
+
+
+
+  

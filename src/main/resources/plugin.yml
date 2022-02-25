@@ -1,7 +1,9 @@
 name: ChristmasSnow
-version: '${project.version}'
+version: 1.1
+
 main: ru.mishaneyt.snow.Main
 authors: [ MishaNeYT ]
+
 commands:
   csnow:
     permission: csnow.admin
