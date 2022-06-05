@@ -1,9 +1,10 @@
 name: ChristmasSnow
-version: 1.1
-
 main: ru.mishaneyt.snow.Main
+version: 1.2
+
 authors: [ MishaNeYT ]
 
 commands:
   csnow:
+    description: Main command
     permission: csnow.admin

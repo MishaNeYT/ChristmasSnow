@@ -1,29 +1,30 @@
 Settings:
-  SnowToSpawn: true
+  Enable: true
+  Options:
+    Count: 15
+    RadiusX: 10.0
+    RadiusY: 10.0
+    RadiusZ: 10.0
   EnableWorld:
   - world
   - spawn
-
-SnowToSpawn:
-  Count: 15
-  RadiusX: 10.0
-  RadiusY: 10.0
-  RadiusZ: 10.0
 
 Messages:
   Help:
   - ''
   - '&2 Помощь по плагину &bCSnow &8| &2Текущая версия: &f%version%'
-  - '&8 ▪ &b/csnow &f- помощь по плагину;'
+  - '&8 ▪ &b/csnow toggle &f- переключить;'
   - '&8 ▪ &b/csnow reload &f- перезагрузить плагин.'
   - ''
-  - '&2 Создатель: MishaNeYT (VK: @pleasantvkchannel)'
+  - '&2 Создатель: &bMishaNeYT &2(&9VK: &b@pleasantvkchannel&2)'
   - ''
-
-  Reload: '&2Snow &8| &fПлагин успешно - &aперезагружен&f!'
-  OnlyPlayer: '&2Snow &8| &cКоманду может использовать только игрок!'
-  ErrorArgs: '&2Snow &8| &cКоманда введена не правильно! Используйте /csnow'
-  noPerm: '&2Snow &8| &cУ вас нет прав!'
+  Reload: '&2CSnow &8| &fПлагин успешно - &aперезагружен&f.'
+  OnlyPlayer: '&2CSnow &8| &cКоманду может использовать только игрок.'
+  Error: '&2CSnow &8| &cКоманда введена не правильно! Используйте /csnow'
+  Toggle:
+    Enable: '&2CSnow &8| &fВы переключили падение снега - &aвключено&f.'
+    Disable: '&2CSnow &8| &fВы переключили падение снега - &cотключено&f.'
+  NoPerm: '&2CSnow &8| &cУ вас нет прав!'
 
 
 

@@ -10,34 +10,41 @@ import ru.mishaneyt.snow.utils.Utils;
 
 public class Commands implements CommandExecutor {
 
+    public Commands(Main main) {
+        main.getCommand("csnow").setExecutor(this);
+    }
+
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(Utils.colorChat("Messages.OnlyPlayer"));
-            return false;
+            sender.sendMessage(Utils.ONLY_PLAYER);
+            return true;
         }
-
         if (!sender.hasPermission("csnow.admin")) {
-            sender.sendMessage(Utils.colorChat("Messages.noPerm"));
-            return false;
+            sender.sendMessage(Utils.NO_PERM);
+            return true;
         }
 
-        if (command.getName().equalsIgnoreCase("csnow")) {
-            if (args.length == 0) {
-                PluginDescriptionFile version = Main.getInstance().getDescription();
-                for (String helpMsg : Main.getInstance().getConfig().getStringList("Messages.Help")) {
-                    sender.sendMessage(Utils.color(helpMsg).replace("%version%", version.getVersion()));
-                }
-            } else if (args[0].equalsIgnoreCase("reload")) {
-                Main.getInstance().reloadConfig();
-                Main.getInstance().saveConfig();
-                sender.sendMessage(Utils.colorChat("Messages.Reload"));
-                return false;
-            } else {
-                sender.sendMessage(Utils.colorChat("Messages.ErrorArgs"));
-                return true;
-            }
+        Player p = (Player) sender;
+
+        if (args.length == 0) {
+            PluginDescriptionFile version = Main.getInstance().getDescription();
+
+            for (String helpMsg : Main.getInstance().getConfig().getStringList("Messages.Help"))
+                p.sendMessage(Utils.color(helpMsg).replace("%version%", version.getVersion()));
         }
+
+        else if (args.length == 1) {
+            if (args[0].equalsIgnoreCase("reload")) {
+                Main.getInstance().reloadConfig();
+                p.sendMessage(Utils.RELOAD);
+            }
+
+            else if (args[0].equalsIgnoreCase("toggle")) {
+                Utils.toggle(p);
+
+            } else p.sendMessage(Utils.ERROR);
+        } else p.sendMessage(Utils.ERROR);
         return false;
     }
 }
